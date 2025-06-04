@@ -13,6 +13,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* espacio entre logo y texto */
+}
+
+.logo-title img {
+    height: 40px; /* tamaño del logo */
+    width: auto;
+    border-radius: 6px; /* opcional para bordes redondeados */
+}
+
+.logo-title .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1C1154; /* ajusta a tu paleta */
+    font-family: 'Segoe UI', sans-serif; /* o la que uses */
+}
 
 body {
     font-family: 'Inter', sans-serif;
@@ -215,56 +233,88 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
-
 .price-card {
-    background: var(--white);
-    border-radius: 12px;
+    background: linear-gradient(to bottom right, #184764, #62D7BE);
+    border-radius: 20px;
     padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 
 .price-card.featured {
     transform: scale(1.05);
-    border: 2px solid var(--primary);
+    border: 2px solid #ffffff88; /* resaltado sutil */
 }
 
 .price-card:hover {
     transform: translateY(-5px);
 }
 
-.price-header {
-    text-align: center;
-    margin-bottom: 2rem;
+.price-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .price {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--secondary);
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #ffffff;
 }
 
 .price span {
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: normal;
+    display: block;
+    margin-top: 0.25rem;
+    color: #ffffffcc;
 }
 
 .features {
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin-top: 1rem;
 }
 
 .features li {
-    padding: 0.75rem 0;
-    border-bottom: 1px solid var(--gray-200);
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Agrega un ícono si quieres como en el diseño */
+.features li::before {
+    content: '✔';
+    color: #c5f1ff;
+    font-weight: bold;
 }
 
 /* Testimonials */
 .testimonials {
     padding: 6rem 0;
-    background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
-    color: var(--white);
+    background: url('images/comentario.jpg') no-repeat center center / cover;
+    position: relative;
+    color: white;
+}
+
+.testimonials::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* capa oscura para contraste de texto */
+    z-index: 0;
+}
+
+.testimonials .container {
+    position: relative;
+    z-index: 1; /* para que el contenido esté sobre la capa oscura */
 }
 
 .testimonial {
@@ -278,12 +328,99 @@ body {
     font-size: 1.25rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
+    font-weight: 500;
+    color: white;
 }
 
 .author {
     font-weight: 600;
     font-style: italic;
+    color: #ffffffcc;
 }
+
+/* Swiper bullets */
+.swiper-pagination-bullet {
+    background: white;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+.footer {
+    background: #184764;
+    color: white;
+    padding: 4rem 0 2rem;
+    font-size: 0.95rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    align-items: start;
+}
+
+.footer .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.footer .logo-title img {
+    height: 40px;
+    width: auto;
+    border-radius: 6px;
+}
+
+.footer .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.footer-description {
+    color: #d1d5db;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+
+.footer-column h4 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+    color: #d1d5db;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #d1d5db;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #62D7BE;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 2rem;
+    color: #a0aec0;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
