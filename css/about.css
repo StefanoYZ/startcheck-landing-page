@@ -1,0 +1,228 @@
+/* Estilos generales para la sección "Sobre Nosotros" */
+.about-us {
+    background-color: #f9fafb;  /* Fondo blanco o gris claro */
+    padding: 100px 0 80px;       /* Espaciado vertical para mayor margen superior */
+    text-align: center;          /* Centra el texto */
+    margin-top: 80px;            /* Separación de la parte superior */
+    position: relative;
+}
+
+/* Estilos para el encabezado de la sección */
+.about-header {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 3.5rem;        /* Tamaño de texto más grande */
+    font-weight: 700;         /* Mayor peso para hacerlo más destacado */
+    color: var(--secondary);  /* Color de texto principal */
+    margin-bottom: 1rem;      /* Espaciado inferior */
+    text-transform: uppercase; /* Hace el texto en mayúsculas */
+    letter-spacing: 2px;      /* Espaciado entre letras */
+}
+
+.section-subtitle {
+    font-size: 1.6rem;         /* Aumenta el tamaño del subtítulo */
+    color: #555;
+    opacity: 0.8;
+    max-width: 800px;          /* Limita el ancho del texto */
+    margin: 0 auto;            /* Centra el subtítulo */
+    font-weight: 500;          /* Un poco menos de peso que el título */
+}
+
+/* Efecto de subrayado en el título */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary);  /* Subrayado con color principal */
+    margin: 1rem auto;                 /* Centrado */
+}
+
+/* Estilos para los cards de los miembros del equipo */
+.about-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;                      /* Ajusta el espacio entre las cards */
+    flex-wrap: wrap;
+    margin-top: 50px;                /* Separación de la parte superior */
+}
+
+/* Cada card con información del miembro */
+.about-card {
+    background-color: var(--white);
+    width: 300px;                   /* Tamaño de las tarjetas */
+    padding: 30px;
+    border-radius: 15px;            /* Bordes más redondeados */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);  /* Sombra más suave */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;               /* Hace que las imágenes no sobresalgan */
+}
+
+/* Efecto de hover sobre las cards */
+.about-card:hover {
+    transform: translateY(-15px);   /* Mueve la card hacia arriba con mayor suavidad */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);  /* Efecto de sombra al hacer hover */
+}
+
+/* Fondo degradado en el hover */
+.about-card:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(65, 102, 100, 0.2) 0%, rgba(73, 149, 145, 0.6) 100%);
+    z-index: -1;   /* Coloca el fondo por detrás del contenido */
+}
+
+/* Imagen de los miembros del equipo */
+.team-photo {
+    width: 150px;            /* Tamaño fijo para las fotos */
+    height: 150px;
+    object-fit: cover;       /* Asegura que la imagen cubra toda la parte redonda */
+    border-radius: 50%;      /* Hace la imagen redonda */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+}
+
+/* Nombre del miembro */
+.team-member-name {
+    font-size: 1.7rem;       /* Tamaño más grande */
+    font-weight: 600;
+    color:#184764;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;     /* Espaciado entre letras */
+}
+
+/* Posición del miembro */
+.team-member-position {
+    font-size: 1.34rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    text-transform: capitalize; 
+    font-weight: bold;
+}
+
+/* Biografía del miembro */
+.team-member-bio {
+    font-size: 1.2rem;
+    color: #777;             /* Color gris suave */
+    opacity: 0.9;
+    margin-bottom: 30px;      /* Espaciado al final */
+    font-weight: 400;
+    font-weight: bold;
+}
+
+/* Estilos para el botón */
+.about-btn {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 12px 36px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.about-btn:hover {
+    background-color: #38b2ac;
+    transform: scale(1.05);   /* Efecto de escala al hacer hover */
+}
+/* Efecto de hover sobre las cards */
+.about-card:hover {
+    transform: translateY(-15px);   /* Mueve la card hacia arriba con mayor suavidad */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);  /* Efecto de sombra al hacer hover */
+}
+
+/* Fondo degradado en el hover */
+.about-card:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(150deg, rgba(162, 202, 193, 0.314) 0%, rgba(50, 185, 176, 0.6) 100%);
+    z-index: -1;   /* Coloca el fondo por detrás del contenido */
+}
+
+/* Cambio de color del texto al hacer hover */
+.about-card:hover .team-member-position{
+    color: white;
+}
+.about-card:hover .team-member-bio {
+    color: white;  /* Cambiar el color del texto a blanco al hacer hover */
+}
+
+/* Responsividad: Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Coloca las cards una debajo de la otra */
+        gap: 30px;              /* Reduce el espacio entre las tarjetas */
+    }
+
+    .section-title {
+        font-size: 2.5rem;      /* Reduce el tamaño del título */
+    }
+
+    .section-subtitle {
+        font-size: 1.4rem;      /* Reduce el tamaño del subtítulo */
+    }
+
+    .about-card {
+        width: 90%;             /* Hace que las tarjetas ocupen casi todo el ancho */
+        margin: 0 auto;         /* Centra las tarjetas */
+    }
+
+    .team-photo {
+        width: 120px;           /* Ajusta el tamaño de la foto en pantallas pequeñas */
+        height: 120px;
+    }
+
+    .about-btn {
+        padding: 10px 30px;     /* Reduce el tamaño del botón */
+        font-size: 1rem;         /* Ajusta el tamaño del texto */
+    }
+}
+
+
+/* Footer */
+.footer {
+    background: linear-gradient(145deg, #184764, #62D7BE);
+    color: white;
+    padding: 4rem 0 2rem;
+    font-size: 0.95rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-column h4 {
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #62D7BE;
+}

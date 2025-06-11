@@ -71,31 +71,60 @@ body {
     text-decoration: none;
     color: var(--secondary);
     font-weight: 500;
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+.nav-links a:hover {
+    color: var(--primary); /* Cambiar color del texto al pasar el mouse */
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px; /* Altura del borde */
+    background-color: var(--secondary); /* Borde con el color que desees */
+    transform: scaleX(0); /* Comienza sin mostrar */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1); /* Al pasar el mouse, el borde se expande */
+    transform-origin: bottom left;
 }
 
 /* Buttons */
 .btn-primary, .btn-secondary {
-    padding: 0.75rem 1.5rem;
+    padding: 1rem 2rem;  /* Aumenta el padding para hacer el botón más grande */
     border-radius: 8px;
-    font-weight: 600;
+    font-weight: 800;  /* Aumenta el peso de la fuente */
+    font-size: 1.2rem; /* Aumenta el tamaño de la fuente */
     border: none;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: transform 0.2s, box-shadow 0.3s ease;  /* Transición suave al hacer hover */
 }
 
+/* Estilo del botón primario */
 .btn-primary {
     background: var(--primary);
     color: var(--white);
 }
 
+/* Estilo del botón secundario */
 .btn-secondary {
     background: var(--white);
     color: var(--secondary);
     border: 2px solid var(--secondary);
 }
 
+/* Efecto hover en los botones */
 .btn-primary:hover, .btn-secondary:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega sombra al hacer hover */
 }
 
 /* Hero Section */
@@ -111,13 +140,13 @@ body {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
     font-weight: 700;
 }
 
 .hero p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
     opacity: 0.9;
 }
@@ -128,7 +157,7 @@ body {
     left: 0;
     width: 100%;
     height: 150px;
-    background: url('images/wave.svg') no-repeat bottom;
+    background: url('/assets/icons/wave.svg') no-repeat bottom;
     background-size: cover;
 }
 
@@ -255,13 +284,26 @@ body {
     transform: translateY(-5px);
 }
 
-.price-header h3 {
+.price-header h3{
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
+.popular-badge {
+    background-color: #ffffff;  /* Color de fondo */
+    color: rgb(0, 0, 0);               /* Color de texto */
+    padding: 0.5rem 1rem;       /* Espaciado interno */
+    font-size: 1rem;            /* Tamaño de fuente */
+    font-weight: 600;           /* Peso de la fuente */
+    border-radius: 25px;       /* Bordes redondeados */
+    display: inline-block;      /* Mostrar como bloque en línea */
+    margin-top: 10px;           /* Separación del precio */
+    text-align: center;         /* Centrado del texto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
 .price {
-    font-size: 2.2rem;
+    font-size: 3rem;
     font-weight: bold;
     color: #ffffff;
 }
@@ -298,7 +340,7 @@ body {
 /* Testimonials */
 .testimonials {
     padding: 6rem 0;
-    background: url('images/comentario.jpg') no-repeat center center / cover;
+    background: url('/assets/images/comentario.jpg') no-repeat center center / cover;
     position: relative;
     color: white;
 }
@@ -348,97 +390,127 @@ body {
 .swiper-pagination-bullet-active {
     opacity: 1;
 }
+
+/*Footer*/
 .footer {
-    background: #184764;
+    background: linear-gradient(145deg, #184764, #62D7BE); /* Gradiente de colores que usas */
     color: white;
     padding: 4rem 0 2rem;
     font-size: 0.95rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
 }
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
     align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .footer .logo-title {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 1rem;
+    gap: 12px;
+    margin-bottom: 1.5rem;
 }
 
 .footer .logo-title img {
-    height: 40px;
+    height: 60px;
     width: auto;
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
 .footer .title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: white;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 .footer-description {
-    color: #d1d5db;
-    margin-top: 0.5rem;
-    line-height: 1.6;
+    color: #ffffff;
+    margin-top: 1rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    font-weight: 700; /* Negrita */
 }
 
 .footer-column h4 {
-    font-size: 1rem;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
     color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700; /* Negrita */
 }
 
 .footer-column ul {
-    list-style: none;
-    padding: 0;
+    margin-bottom: 0.8rem;
+    color: #ffffff; /* Blanco */
+    font-size: 1.1rem; /* Un poco más grande */
+    font-weight: 600; /* Negrita */
 }
 
 .footer-column ul li {
-    margin-bottom: 0.5rem;
-    color: #d1d5db;
+    margin-bottom: 0.8rem;
+    color: #ffffff; /* Blanco */
+    font-size: 1.1rem; /* Un poco más grande */
+    font-weight: 600; /* Negrita */
 }
 
 .footer-column ul li a {
     text-decoration: none;
-    color: #d1d5db;
-    transition: color 0.3s;
+    color: #ffffff;
+    transition: color 0.3s ease;
+    font-weight: 700
 }
 
 .footer-column ul li a:hover {
-    color: #62D7BE;
+    color: #62D7BE; /* Resaltado con el color principal */
 }
 
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 3rem;
     color: #a0aec0;
+    font-size: 0.9rem;
 }
 
+.footer .social-icons {
+    margin-top: 2rem;
+}
 
-/* Responsive Design */
+.footer .social-icons a {
+    margin: 0 15px;
+    color: #d1d5db;
+    font-size: 1.8rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: #62D7BE;
+    transform: translateY(-5px); /* Animación para darle más interactividad */
+}
+
+.footer .footer-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+}
+
 @media (max-width: 768px) {
-    .steps,
-    .benefits-grid,
-    .pricing-cards {
-        grid-template-columns: 1fr;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1.25rem;
-    }
-
-    .nav-links {
-        display: none;
+    .footer-content {
+        grid-template-columns: 1fr; /* Columnas apiladas en pantallas pequeñas */
     }
 }

@@ -1,0 +1,20 @@
+/* Responsive Design */
+@media (max-width: 768px) {
+    .steps,
+    .benefits-grid,
+    .pricing-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.25rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}

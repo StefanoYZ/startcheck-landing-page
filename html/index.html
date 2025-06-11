@@ -8,22 +8,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/styles-index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
-   <!-- Navbar -->
+    <!-- Navbar -->
 <nav class="navbar">
     <div class="container">
         <div class="logo-title">
-            <img src="images/logo.jpg" alt="StartCheck">
+            <img src="/assets/images/logo.jpg" alt="StartCheck">
             <span class="title">StartCheck</span>
         </div>
         <div class="nav-links">
             <a href="#inicio">Inicio</a>
-            <a href="#planes">Planes</a>
-            <a href="#sobre-nosotros">Sobre Nosotros</a>
-            <a href="#contacto">Contacto</a>
+            <a href="#pricing">Planes</a>
+            <a href="about.html">Sobre Nosotros</a>
+            <a href="contact.html">Contacto</a>
             <button class="btn-secondary">Sign up</button>
             <button class="btn-primary">Sign in</button>
         </div>
@@ -31,13 +31,15 @@
 </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="inicio" class="hero">
         <div class="container">
             <h1>¿Tu idea de negocio tiene futuro?</h1>
             <p>Descúbrelo en minutos con StartCheck</p>
-            <button class="btn-primary">Try For Free</button>
+                <a href="contact.html">
+                    <button class="btn-primary">Try For Free</button>
+                </a>
+            <div class="wave-bottom"></div>
         </div>
-        <div class="wave-bottom"></div>
     </section>
 
     <!-- How it Works -->
@@ -47,21 +49,21 @@
             <div class="steps">
                 <div class="step">
                     <div class="step-icon">
-                        <img src="images/write.svg" alt="Escribir">
+                        <img src="/assets/icons/write.svg" alt="Escribir">
                     </div>
                     <h3>1. Escribe tu idea</h3>
                     <p>Describe tu proyecto en un campo de texto de manera simple y rápida</p>
                 </div>
                 <div class="step">
                     <div class="step-icon">
-                        <img src="images/analyze.svg" alt="Análisis">
+                        <img src="/assets/icons/analyze.svg" alt="Análisis">
                     </div>
                     <h3>2. Recibe tu análisis con IA</h3>
                     <p>Nuestro motor con IA analiza tu idea rápidamente</p>
                 </div>
                 <div class="step">
                     <div class="step-icon">
-                        <img src="images/improve.svg" alt="Mejora">
+                        <img src="/assets/icons/improve.svg" alt="Mejora">
                     </div>
                     <h3>3. Mejora tu enfoque</h3>
                     <p>Recibe feedback y sugerencias para pulir tu plan</p>
@@ -76,32 +78,32 @@
             <h2>Beneficios Clave</h2>
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <img src="images/fast.svg" alt="Rápido">
+                    <img src="/assets/icons/fast.svg" alt="Rápido">
                     <h3>Resultados Rápidos</h3>
                     <p>Obtén un análisis detallado de tu idea en segundos</p>
                 </div>
                 <div class="benefit-card">
-                    <img src="images/compare.svg" alt="Comparación">
+                    <img src="/assets/icons/compare.svg" alt="Comparación">
                     <h3>Comparación con Startups</h3>
                     <p>Compara tu idea con startups exitosas similares</p>
                 </div>
                 <div class="benefit-card">
-                    <img src="images/market.svg" alt="Mercado">
+                    <img src="/assets/icons/market.svg" alt="Mercado">
                     <h3>Recomendaciones de Mercado</h3>
                     <p>Recibe insights sobre tu mercado objetivo</p>
                 </div>
                 <div class="benefit-card">
-                    <img src="images/improve.svg" alt="Mejora">
+                    <img src="/assets/icons/improve.svg" alt="Mejora">
                     <h3>Sugerencias de Mejora</h3>
                     <p>Obtén recomendaciones para fortalecer tu proyecto</p>
                 </div>
                 <div class="benefit-card">
-                    <img src="images/data.svg" alt="Datos">
+                    <img src="/assets/icons/data.svg" alt="Datos">
                     <h3>Validación Basada en Datos</h3>
                     <p>Análisis respaldado por datos del mercado actual</p>
                 </div>
                 <div class="benefit-card">
-                    <img src="images/time.svg" alt="Tiempo">
+                    <img src="/assets/icons/time.svg" alt="Tiempo">
                     <h3>Ahorra Tiempo y Dinero</h3>
                     <p>Valida antes de invertir grandes recursos</p>
                 </div>
@@ -110,7 +112,7 @@
     </section>
 
     <!-- Pricing -->
-    <section class="pricing">
+    <section id="pricing" class="pricing">
         <div class="container">
             <h2>Nuestros Planes</h2>
             <div class="pricing-cards">
@@ -128,6 +130,7 @@
                 <div class="price-card featured">
                     <div class="price-header">
                         <h3>Análisis detallado del mercado</h3>
+                        <div class="popular-badge">Popular</div>
                         <div class="price">S/10 <span>por mes</span></div>
                     </div>
                     <ul class="features">
@@ -188,7 +191,7 @@
     <div class="container footer-content">
       <div class="footer-column">
         <div class="logo-title">
-          <img src="images/logo.jpg" alt="StartCheck">
+          <img src="/assets/images/logo.jpg" alt="StartCheck">
           <span class="title">StartCheck</span>
         </div>
         <p class="footer-description">Valida tu idea de negocio con tecnología e inteligencia artificial. StartCheck te guía antes de lanzarte al mercado.</p>
@@ -207,9 +210,9 @@
       <div class="footer-column">
         <h4>Contacto</h4>
         <ul>
-          <li>📧 contacto@startcheck.com</li>
-          <li>📍 Lima, Perú</li>
-          <li>☎️ +51 987 654 321</li>
+          <li>contacto@startcheck.com</li>
+          <li> Lima, Perú</li>
+          <li> +51 987 654 321</li>
         </ul>
       </div>
     </div>

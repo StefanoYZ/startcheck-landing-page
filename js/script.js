@@ -73,3 +73,19 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.step, .benefit-card, .price-card').forEach((element) => {
     observer.observe(element);
 });
+
+// Script para manejar el formulario
+document.getElementById("ideaForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Formulario enviado exitosamente!");
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});

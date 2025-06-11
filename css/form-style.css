@@ -1,0 +1,164 @@
+/* Estilos específicos para la sección hero-validate */
+.hero-validate {
+      background: linear-gradient(135deg, var(--secondary) 20%, var(--primary) 100%);
+    color: #000; /* Texto en negro por defecto */
+    padding: 80px 0; /* Aumentamos el padding para dar más espacio */
+    text-align: center;
+    margin-top: 60px; /* Da espacio desde la parte superior de la página */
+}
+
+/* Estilo para el encabezado */
+.hero-validate h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    padding-top: 50px; /* Espacio desde el borde superior */
+    color: white;
+}
+
+.hero-validate .highlight {
+    color: var(--primary); /* El color verde que sueles usar */
+}
+
+/* Estilo del párrafo */
+.hero-validate p {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    color: white;
+}
+/* Estilo para el icono */
+.icon-container {
+    text-align: center;
+    margin-bottom: 1rem;  /* Espacio entre el icono y el título */
+}
+
+.comment-icon {
+        height: auto;
+}
+
+/* Estilo para el encabezado */
+.form-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-align: center;
+    color: #38b2ac; /* Centra el texto */
+}
+
+/* Estilo para el párrafo */
+p {
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    text-align: center;  /* Centra el texto */
+    font-weight: 500;   
+    color: #4a5568;/* Hace el texto un poco más pesado */
+}
+
+
+
+
+
+/* Estilos para la sección del formulario */
+.form-section {
+    background-color: #f9fafb;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center; /* Centra el formulario horizontalmente */
+    align-items: center;     /* Centra el formulario verticalmente */
+    min-height: 100vh;       /* Asegura que la sección ocupe al menos toda la altura de la ventana */
+}
+
+/* Fondo blanco y bordes redondeados */
+.bg-white {
+    background-color: #ffffff;
+    border-radius: 1.25rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 60px;
+    width: 100%;         /* El formulario ocupa el 100% del espacio disponible */
+    max-width: 1400px;   /* Limita el ancho máximo del formulario */
+    margin: 0 auto;      /* Centra el formulario */
+}
+
+/* Contenedor para los campos de entrada (input y textarea) */
+.input-container, .textarea-container {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+/* Diseño flexible de los campos */
+.form-row {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;  /* Permite que los campos se acomoden en pantallas pequeñas */
+}
+
+/* Ajuste de los campos a dos columnas en pantallas grandes */
+.input-container {
+    flex: 1;
+    min-width: 200px;  /* Cada columna ocupa el 50% del ancho, con un mínimo de 200px */
+}
+
+/* Estilos generales de los campos de entrada */
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #d1d5db;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto de focus */
+input:focus, textarea:focus {
+    border-color: #38b2ac;
+    outline: none;
+    box-shadow: 0 0 10px rgba(56, 178, 172, 0.3);
+}
+
+/* Etiquetas de los campos */
+label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Botón de envío */
+button {
+    background-color: #38b2ac;
+    color: white;
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Efecto de hover en el botón */
+button:hover {
+    background-color: #63b3ed;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividad: Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;  /* Los campos se apilan en pantallas pequeñas */
+    }
+    .input-container {
+        width: 100%;  /* Los campos ocupan el 100% del ancho en pantallas pequeñas */
+    }
+    button {
+        padding: 10px 20px;  /* Reduce el tamaño del botón en pantallas pequeñas */
+        font-size: 1rem; /* Ajusta el tamaño del texto del botón */
+    }
+}
