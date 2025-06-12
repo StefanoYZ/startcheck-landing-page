@@ -99,7 +99,7 @@ body {
 
 /* Buttons */
 .btn-primary, .btn-secondary {
-    padding: 1rem 2rem;  /* Aumenta el padding para hacer el botón más grande */
+    padding: 1rem 1rem;  /* Aumenta el padding para hacer el botón más grande */
     border-radius: 8px;
     font-weight: 800;  /* Aumenta el peso de la fuente */
     font-size: 1.2rem; /* Aumenta el tamaño de la fuente */
