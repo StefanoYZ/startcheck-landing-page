@@ -110,7 +110,7 @@ body {
 
 /* Estilo del botón primario */
 .btn-primary {
-    background: var(--primary);
+    background: var(--secondary);
     color: var(--white);
 }
 
