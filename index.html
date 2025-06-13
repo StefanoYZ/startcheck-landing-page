@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StartCheck</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -39,9 +39,21 @@
         <div class="container">
             <h1>¿Tu idea de negocio tiene futuro?</h1>
             <p>Descúbrelo en minutos con StartCheck</p>
-                <a href="contact.html">
-                    <button class="btn-primary">Try For Free</button>
-                </a>
+            <form class="search-form" action="/search" method="get">
+                <input
+                type="text"
+                name="q"
+                class="search-input"
+                placeholder="Pierde el miedo y ingresa tu idea de negocio"
+                aria-label="Buscar"
+                 />
+                 <button type="submit" class="search-button" aria-label="Buscar">
+                    🔍
+                </button>
+            </form>
+
+    <div class="wave-bottom"></div>
+  </div>    
             <div class="wave-bottom"></div>
         </div>
     </section>
@@ -75,8 +87,54 @@
             </div>
         </div>
     </section>
+    <!-- Hero Video Section -->   
+    <section class="curved-hero">
+    <div class="hero-content">
+        <div class="text-content">
+        <h2 class="text-4xl font-bold text-white leading-tight mb-6">
+            Convierte tu idea en un negocio con potencial
+        </h2>
+        
+        <br> 
+        <p class="text-lg text-white/90 leading-relaxed max-w-xl">
+            🎯 Obtén en minutos un <strong>informe inteligente y personalizado</strong> que te dirá si tu idea tiene futuro,
+            qué mejorar y cómo compararte con startups reales.
+        </p>
 
-    <!-- Benefits -->
+        <br>
+
+        <p class="text-lg text-white/90 leading-relaxed max-w-xl">
+            😓 <strong>¿Cansado de pivotear sin rumbo?</strong><br>
+            Esta es la guía que necesitabas para dejar de adivinar y empezar a construir con foco.
+        </p>
+
+        <br>
+
+
+        <a href="#benefits" class="btn inline-block">Quiero probarlo ahora</a>
+        </div>
+
+        <div class="video-content">
+        <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Demo Video"
+            frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+    </div>
+    </section>
+    <!-- ✅ Onda inferior SVG -->
+    <div class="wave-divider">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,32 C360,120 1080,0 1440,100 L1440,0 L0,0 Z" fill="#184764"></path>
+    </svg>
+    </div>
+
+
+
+
+
+    <!-- Beneficios -->
     <section class="benefits">
         <div class="container">
             <h2>Beneficios Clave</h2>
@@ -85,31 +143,37 @@
                     <img src="assets/icons/fast.svg" alt="Rápido">
                     <h3>Resultados Rápidos</h3>
                     <p>Obtén un análisis detallado de tu idea en segundos</p>
+                    <img src="assets/images/b01.png" alt="" class="hover-img">
                 </div>
                 <div class="benefit-card">
                     <img src="assets/icons/compare.svg" alt="Comparación">
                     <h3>Comparación con Startups</h3>
                     <p>Compara tu idea con startups exitosas similares</p>
+                    <img src="assets/images/b02.png" alt="" class="hover-img">
                 </div>
                 <div class="benefit-card">
                     <img src="assets/icons/market.svg" alt="Mercado">
                     <h3>Recomendaciones de Mercado</h3>
                     <p>Recibe insights sobre tu mercado objetivo</p>
+                    <img src="assets/images/b03.png" alt="" class="hover-img">
                 </div>
                 <div class="benefit-card">
                     <img src="assets/icons/improve.svg" alt="Mejora">
                     <h3>Sugerencias de Mejora</h3>
                     <p>Obtén recomendaciones para fortalecer tu proyecto</p>
+                    <img src="assets/images/b06.png" alt="" class="hover-img">
                 </div>
                 <div class="benefit-card">
                     <img src="assets/icons/data.svg" alt="Datos">
                     <h3>Validación Basada en Datos</h3>
                     <p>Análisis respaldado por datos del mercado actual</p>
+                    <img src="assets/images/b04.png" alt="" class="hover-img">
                 </div>
                 <div class="benefit-card">
                     <img src="assets/icons/time.svg" alt="Tiempo">
                     <h3>Ahorra Tiempo y Dinero</h3>
                     <p>Valida antes de invertir grandes recursos</p>
+                    <img src="assets/images/b05.png" alt="" class="hover-img">
                 </div>
             </div>
         </div>
@@ -120,39 +184,75 @@
         <div class="container">
             <h2>Nuestros Planes</h2>
             <div class="pricing-cards">
-                <div class="price-card">
+                <!-- Plan 1: Verificación Inicial -->
+                <div class="price-card plan-1">
+                    <div class="card-image">
+                        <img src="assets/images/plan01.png" alt="Verificación Inicial">
+                    </div>
                     <div class="price-header">
-                        <h3>Verificación Inicial de Idea</h3>
-                        <div class="price">Gratis</div>
+                        <div class="popular-badge">Pruebalo</div>
+                        <h3>Verificación inicial de idea</h3>
+                         <div class="card-description">
+                        Realiza una rápida verificación para saber si tu idea tiene potencial en el mercado.                       </div>
+                        <div class="price free">Gratis<span>por mes</span></div>
+                        <div class="additional-text">
+                            Incluye verificación básica y análisis inicial.
+                        </div>
                     </div>
                     <ul class="features">
-                        <li>Análisis básico</li>
-                        <li>Feedback inicial</li>
-                        <li>1 proyecto</li>
+                        <li>Verificación básica</li>
+                        <li>Atención limitada</li>
+                        <li>1 consulta</li>
                     </ul>
+                    <button class="info-button">Versión gratuita</button>
                 </div>
-                <div class="price-card featured">
+
+                <!-- Plan 2: Análisis Detallado (Popular) -->
+                <div class="price-card plan-2 featured">
+                    <div class="card-image">
+                        <img src="assets/images/plan02.png" alt="Análisis Detallado">
+                    </div>
                     <div class="price-header">
-                        <h3>Análisis detallado del mercado</h3>
                         <div class="popular-badge">Popular</div>
+                        <h3>Análisis detallado del mercado</h3>
+                        <div class="card-description">
+                            Análisis profundo del mercado y competencia con métricas detalladas.
+                        </div>
                         <div class="price">S/10 <span>por mes</span></div>
+                        <div class="additional-text">
+                            Incluye análisis completo y seguimiento mensual.
+                        </div>
                     </div>
                     <ul class="features">
-                        <li>Análisis profundo</li>
+                        <li>Análisis completo</li>
                         <li>Estudio de mercado</li>
                         <li>Métricas detalladas</li>
                     </ul>
+                    <button class="info-button">Obtener Plan</button>
                 </div>
-                <div class="price-card">
+
+                <!-- Plan 3: Evaluación Técnica -->
+                <div class="price-card plan-3">
+                    <div class="card-image">
+                        <img src="assets/images/plan03.png" alt="Evaluación Técnica">
+                    </div>
                     <div class="price-header">
+                        <div class="popular-badge">Premium</div>
                         <h3>Evaluación Técnica Completa</h3>
+                        <div class="card-description">
+                            Evaluación técnica completa con recomendaciones de IA y feedback experto.
+                        </div>
                         <div class="price">S/40 <span>por mes</span></div>
+                        <div class="additional-text">
+                            Incluye evaluación técnica y consultoría especializada.
+                        </div>
                     </div>
                     <ul class="features">
                         <li>Evaluación técnica</li>
                         <li>Feedback de red</li>
                         <li>Recomendaciones IA</li>
                     </ul>
+                    <button class="info-button">Obtener Plan</button>
                 </div>
             </div>
         </div>
@@ -188,7 +288,7 @@
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 <!-- Footer -->
 <footer class="footer">
@@ -204,10 +304,10 @@
       <div class="footer-column">
         <h4>Enlaces</h4>
         <ul>
-          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="index.html">Inicio</a></li>
           <li><a href="#pricing">Planes</a></li>
-          <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="./html/about.html">Sobre Nosotros</a></li>
+          <li><a href="./html/contact.html">Contacto</a></li>
         </ul>
       </div>
   
