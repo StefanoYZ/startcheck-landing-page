@@ -89,3 +89,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const boton = document.getElementById('descargarPDF');
+  
+    if (boton) {
+      boton.addEventListener('click', () => {
+        const elemento = document.getElementById('resultado');
+  
+        const opciones = {
+          margin:       0.5,
+          filename:     'informe-startcheck.pdf',
+          image:        { type: 'jpeg', quality: 0.98 },
+          html2canvas:  { scale: 2 },
+          jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+        };
+  
+        html2pdf().set(opciones).from(elemento).save();
+      });
+    }
+  });
+  

@@ -1,6 +1,7 @@
+
 /* Estilos específicos para la sección hero-validate */
 .hero-validate {
-      background: linear-gradient(135deg, var(--secondary) 20%, var(--primary) 100%);
+    background: linear-gradient(135deg, var(--secondary) 20%, var(--primary) 100%);
     color: #000; /* Texto en negro por defecto */
     padding: 80px 0; /* Aumentamos el padding para dar más espacio */
     text-align: center;

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StartCheck</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles-index.css">
+    <link rel="stylesheet" href="../css/result.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="container">
+        <div class="logo-title">
+            <img src="../assets/images/logo.jpg" alt="StartCheck">
+            <span class="title">StartCheck</span>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Inicio</a>
+            <a href="../index.html#pricing">Planes</a>
+            <a href="./about.html">Sobre Nosotros</a>
+            <a href="./contact.html">Contacto</a>
+            <a href="./signup.html">
+                <button class="btn-secondary">Registrarse</button>
+            </a>
+            <a href="./signin.html">
+                <button class="btn-primary">Iniciar sesión</button>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- Result Section -->
+<section id="resultado" class="resultado-section">
+  <h1>Análisis de tu Idea de Startup</h1>
+  <p class="intro">Analizamos tu idea usando herramientas como Lean Canvas, SCAMPER y radar de tendencias. A continuación te mostramos los hallazgos organizados en secciones clave para facilitar su comprensión.</p>
+
+  <div class="analisis-box">
+    <h2><img src="/assets/icons/idea.svg" class="icono-h2"> Idea Principal</h2>
+    <p>Tu startup propone una app que combina recetas personalizadas con entrega de ingredientes frescos desde supermercados aliados. Se enfoca en usuarios con preferencias específicas como dieta keto, vegana o sin gluten.</p>
+  </div>
+
+  <div class="analisis-box">
+    <h2><img src="/assets/icons/mercado.svg" class="icono-h2"> Mercado Objetivo</h2>
+    <p>Individuos y familias urbanas que priorizan salud y conveniencia. Principalmente entre 25 y 45 años, con alto uso de apps de delivery y preocupación por la nutrición.</p>
+  </div>
+
+  <div class="analisis-box">
+    <h2><img src="/assets/icons/strategy.svg" class="icono-h2"> Estrategia para Ganar</h2>
+    <p>El enfoque se centra en la diferenciación por salud y personalización. Recetas adaptadas + conveniencia de ingredientes frescos + integración con supermercados = propuesta de valor clara.</p>
+  </div>
+
+  <div class="analisis-box">
+    <h2><img src="/assets/icons/money.svg" class="icono-h2"> Fuentes de Ingreso</h2>
+    <ul>
+      <li><strong>Suscripción mensual:</strong> acceso a recetas premium y funciones exclusivas.</li>
+      <li><strong>Comisión por ventas:</strong> cada pedido de ingredientes desde la app genera ingresos.</li>
+      <li><strong>Publicidad segmentada:</strong> marcas de alimentos saludables pueden promocionarse dentro de la app.</li>
+      <li><strong>Afiliados:</strong> monetización mediante recomendaciones de utensilios y productos de cocina.</li>
+      <li><strong>Servicios B2B:</strong> herramientas de menú y nutrición para chefs y consultores.</li>
+    </ul>
+  </div>
+
+  <div class="analisis-box">
+    <h2><img src="/assets/icons/analysis.svg" class="icono-h2"> Análisis de Benchmark</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Qué hacen</th>
+          <th>Modelo de negocio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>HelloFresh</td><td>Kits de comida con recetas</td><td>Suscripción semanal</td></tr>
+        <tr><td>Blue Apron</td><td>Recetas gourmet + ingredientes</td><td>Suscripción + compra directa</td></tr>
+        <tr><td>Yummly</td><td>App + supermercados</td><td>Freemium + publicidad</td></tr>
+        <tr><td>Tasty</td><td>Recetas virales + e-commerce</td><td>Publicidad + afiliados</td></tr>
+        <tr><td>Cookpad</td><td>Recetas caseras comunitarias</td><td>Freemium + contenido exclusivo</td></tr>
+      </tbody>
+    </table>
+    <p class="benchmark-summary">Tu modelo combina elementos de HelloFresh (kits), Yummly (integración local) y Cookpad (personalización). Esto puede darte ventaja competitiva si enfocas en nichos específicos.</p>
+  </div>
+
+  <div class="analisis-box">
+    <h2><img src="/assets/icons/graphycs.svg" class="icono-h2"> Gráficos y Visualizaciones</h2>
+    <p>Espacio reservado para insertar visualizaciones como:</p>
+    <ul>
+      <li>Radar de tendencias</li>
+      <li>Mapa de competencia</li>
+      <li>Curva de adopción tecnológica</li>
+    </ul>
+    <img 
+      src="/assets/images/graficas.png" 
+      class="graficas" 
+      alt="Visualizaciones de análisis">
+  </div>
+  <div style="text-align: right; margin-top: 2rem;">
+    <button id="descargarPDF" class="btn-primary">Descargar Informe PDF</button>
+  </div>
+  
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-column">
+      <div class="logo-title">
+        <img src="../assets/images/logo.jpg" alt="StartCheck">
+        <span class="title">StartCheck</span>
+      </div>
+      <p class="footer-description">Valida tu idea de negocio con tecnología e inteligencia artificial. StartCheck te guía antes de lanzarte al mercado.</p>
+    </div>
+    <div class="footer-column">
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../index.html#pricing">Planes</a></li>
+        <li><a href="./about.html">Sobre Nosotros</a></li>
+        <li><a href="./contact.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Contacto</h4>
+      <ul>
+        <li>contacto@startcheck.com</li>
+        <li>Lima, Perú</li>
+        <li>+51 987 654 321</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 StartCheck. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="../js/scripts.js"></script>
+<script src="../js/html2pdf.bundle.min.js"></script>
+</body>
+</html>

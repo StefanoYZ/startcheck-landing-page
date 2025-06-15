@@ -1,0 +1,145 @@
+/* Sección principal */
+.resultado-section {
+    max-width: 1100px;
+    margin: 4.5rem auto 0 auto;
+    padding: 4rem 1.5rem;
+    font-family: 'Inter', sans-serif;
+    color: #1d1d1f;
+  }
+  
+  .resultado-section h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #111;
+  }
+  
+  .resultado-section .intro {
+    font-size: 1.125rem;
+    color: #444;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+  }
+  
+  /* Íconos en h2 */
+  .icono-h2 {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+  }
+  
+  /* Imagen grande de gráficas */
+  .graficas {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  
+  /* Caja de análisis */
+  .analisis-box {
+    background-color: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-left: 6px solid #62D7BE;
+    border-radius: 12px;
+    padding: 1.75rem 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    margin-bottom: 2.5rem;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .analisis-box:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  }
+  
+  .analisis-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2c2c2e;
+    display: flex;
+    align-items: center;
+  }
+  
+  .analisis-box p,
+  .analisis-box li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .analisis-box ul {
+    padding-left: 1.25rem;
+    margin: 1rem 0 0 0;
+  }
+  
+  .analisis-box ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Tabla de benchmark */
+  .analisis-box table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+  }
+  
+  .analisis-box table thead {
+    background-color: #f8f8f8;
+    text-align: left;
+  }
+  
+  .analisis-box table th,
+  .analisis-box table td {
+    padding: 0.85rem;
+    border: 1px solid #ddd;
+  }
+  
+  .benchmark-summary {
+    margin-top: 1.25rem;
+    font-style: italic;
+    color: #555;
+  }
+  
+  /* Placeholder de gráfico (si se necesitara) */
+  .placeholder-graph {
+    width: 100%;
+    height: 300px;
+    background: #f3f3f3;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #888;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .resultado-section {
+      padding: 2rem 1rem;
+    }
+  
+    .resultado-section h1 {
+      font-size: 2rem;
+    }
+  
+    .analisis-box {
+      padding: 1.25rem 1.25rem;
+    }
+  
+    .analisis-box table th,
+    .analisis-box table td {
+      font-size: 0.875rem;
+    }
+  
+    .graficas {
+      max-width: 100%;
+    }
+  }
+  
