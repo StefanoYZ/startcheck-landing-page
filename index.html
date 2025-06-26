@@ -19,6 +19,7 @@
             <img src="assets/images/logo.jpg" alt="StartCheck">
             <span class="title">StartCheck</span>
         </div>
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
         <div class="nav-links">
             <a href="index.html">Inicio</a>
             <a href="index.html#pricing">Planes</a>
@@ -287,6 +288,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
+    <script>
+        const btn = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.nav-links');
+        btn.addEventListener('click', () => nav.classList.toggle('open'));
+    </script>
 </body>
 <!-- Footer -->
 <footer class="footer">

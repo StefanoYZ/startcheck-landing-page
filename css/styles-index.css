@@ -39,9 +39,20 @@ body {
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* 2) Botón menú móvil */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--secondary);
 }
 
 /* Navbar */
@@ -59,6 +70,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .nav-links {
@@ -774,4 +786,91 @@ body {
     .footer-content {
         grid-template-columns: 1fr; /* Columnas apiladas en pantallas pequeñas */
     }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    width: 200px;
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease;
+  }
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* 3) Hero responsivo */
+@media (max-width: 992px) {
+  .hero h1 { font-size: 3rem; }
+  .hero p  { font-size: 1.5rem; }
+}
+@media (max-width: 576px) {
+  .hero {
+    padding: 6rem 1rem 4rem;
+    min-height: auto;
+  }
+  .hero h1 { font-size: 2.2rem; }
+  .hero p  { font-size: 1.2rem; }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding-bottom: 150px; /* espacio extra antes de la onda */
+  }
+  .wave-bottom {
+    bottom: 0;
+  }
+}
+
+/* 4) Grid “How it Works” y “Beneficios” */
+@media (max-width: 992px) {
+  .steps,
+  .benefits-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+@media (max-width: 768px) {
+  .steps,
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 5) Curved-hero vídeo flexible */
+@media (max-width: 576px) {
+  .video-content iframe {
+    height: 200px;
+  }
+}
+
+/* 6) Pricing en una columna móvil */
+@media (max-width: 768px) {
+  .pricing-cards {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* 7) Footer apilado */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .wave-bottom {
+    display: none;
+  }
 }
