@@ -228,10 +228,20 @@ body {
 }
 
 .video-content iframe {
-  width: 100%;
-  height: 350px;
-  border-radius: 16px;
-}
+    width: 100%;
+    max-width: 600px; /* o 360px para un celular más grande */
+    aspect-ratio: 9 / 16;
+    max-height: 700px;
+    border-radius: 32px;
+    border: 6px solid #2F302F; /* marco estilo móvil */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    margin: 0 auto;
+    display: block;
+    object-fit: cover; /* Esto recorta los bordes laterales */
+  }
+  
+  
+  
 .btn {
   background: white;
   color: black;
